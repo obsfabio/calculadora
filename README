@@ -1,0 +1,5 @@
+Este projeto consiste numa calculadora em linha de comando.
+Para compila-la com o devc++ basta abrir o arquivo Calculadora.dev.
+Para compila-la no linux, basta usar o comando make.
+
+Para executa-la ./central , para mais informações digite help.

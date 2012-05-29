@@ -1,0 +1,51 @@
+# Project: calculadora
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Calculadora.o Conformador.o Erro.o Gerenciador.o Gramatica.o Memoria.o Unidade_aritmetica.o Validador.o $(RES)
+LINKOBJ  = Calculadora.o Conformador.o Erro.o Gerenciador.o Gramatica.o Memoria.o Unidade_aritmetica.o Validador.o $(RES)
+LIBS =  -L"C:/Programa/Dev-Cpp/lib"  
+INCS =  -I"C:/Programa/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Programa/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Programa/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Programa/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Programa/Dev-Cpp/include/c++/3.4.2"  -I"C:/Programa/Dev-Cpp/include" 
+BIN  = calculadora.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before calculadora.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "calculadora.exe" $(LIBS)
+
+Calculadora.o: Calculadora.cpp
+	$(CPP) -c Calculadora.cpp -o Calculadora.o $(CXXFLAGS)
+
+Conformador.o: Conformador.cpp
+	$(CPP) -c Conformador.cpp -o Conformador.o $(CXXFLAGS)
+
+Erro.o: Erro.cpp
+	$(CPP) -c Erro.cpp -o Erro.o $(CXXFLAGS)
+
+Gerenciador.o: Gerenciador.cpp
+	$(CPP) -c Gerenciador.cpp -o Gerenciador.o $(CXXFLAGS)
+
+Gramatica.o: Gramatica.cpp
+	$(CPP) -c Gramatica.cpp -o Gramatica.o $(CXXFLAGS)
+
+Memoria.o: Memoria.cpp
+	$(CPP) -c Memoria.cpp -o Memoria.o $(CXXFLAGS)
+
+Unidade_aritmetica.o: Unidade_aritmetica.cpp
+	$(CPP) -c Unidade_aritmetica.cpp -o Unidade_aritmetica.o $(CXXFLAGS)
+
+Validador.o: Validador.cpp
+	$(CPP) -c Validador.cpp -o Validador.o $(CXXFLAGS)
